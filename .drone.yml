@@ -11,8 +11,7 @@ pipeline:
       - PYTHONPATH=example
       - DJANGO_SETTINGS_MODULE=example.settings
     commands:
-      - pip install -U pip setuptools wheel
-      - pip install -r requirements/base.txt -r requirements/test.txt
+      - ./scripts/prepare-env.sh
       - pytest --cov-config .coveragerc --cov=apps
 
   publish:
