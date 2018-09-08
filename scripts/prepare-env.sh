@@ -1,7 +1,8 @@
 #!/bin/sh
 
-set -ex \
-    && apk --update add --no-cache \
+set -ex;
+
+apk --update add --no-cache \
     gcc \
     make \
     libc-dev \
@@ -10,7 +11,7 @@ set -ex \
     pcre-dev \
     python3-dev \
     libpq \
-    postgresql-dev \
+    postgresql-dev;
 
-pip install -U pip setuptools wheel
-pip install -r requirements/base.txt -r requirements/test.txt
+pip install -U pip setuptools wheel;
+pip install -r requirements/base.txt -r requirements/test.txt;
