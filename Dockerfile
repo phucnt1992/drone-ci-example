@@ -16,7 +16,7 @@ RUN set -ex \
     wget \
     && python3 -m venv /.pyenv \
     && /.pyenv/bin/pip install -U pip \
-    && /.pyenv/bin/pip install --no-cache-dir -r /requirements.txt
+    && /.pyenv/bin/pip install --no-cache-dir -r /requirements.txt \
     && rm -f requirements.txt
 
 COPY config /config
