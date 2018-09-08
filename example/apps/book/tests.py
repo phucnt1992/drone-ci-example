@@ -27,7 +27,7 @@ class BookAPITestCase(APITestCase):
         response = self.client.get(reverse('api:book-list'))
 
         self.assertEqual(response.status_code, status.HTTP_200_OK)
-        self.assertEqual(len(response.json()), 10)
+        self.assertEqual(len(response.json()), 9)
 
     def test_get_book_detail(self):
         book = BookFactory.create()
