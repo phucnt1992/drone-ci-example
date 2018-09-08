@@ -11,6 +11,7 @@ pipeline:
       - PYTHONPATH=example
       - DJANGO_SETTINGS_MODULE=example.settings
     commands:
+      - chmod +x ./scripts/prepare-env.sh
       - ./scripts/prepare-env.sh
       - pytest --cov-config .coveragerc --cov=apps
 
