@@ -1,0 +1,4 @@
+.pyenv/
+.env
+.coverage
+__pycache__/

@@ -1,0 +1,27 @@
+services:
+  postgres:
+    image: postgres:alpine
+    environment:
+      - POSTGRES_PASSWORD=p@ssw0rd
+
+pipeline:
+  test:
+    image: python:alpine
+    environment:
+      - PYTHONPATH=example
+      - DJANGO_SETTINGS_MODULE=example.settings
+    commands:
+      - pip install -U pip setuptools wheel
+      - pip install -r requirements/base.txt -r requirements/test.txt
+      - pytest --cov-config .coveragerc --cov=apps
+
+  publish:
+    image: plugins/docker
+    repo: phucnguyen/drone-ci-example
+    secrets: [ docker_username, docker_password ]
+    auto_tag: true
+
+  notify:
+    image: plugins/slack
+    webhook: https://hooks.slack.com/services/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
+

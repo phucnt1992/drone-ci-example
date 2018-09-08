@@ -1,0 +1,31 @@
+{
+    "python.pythonPath": "${workspaceFolder}/.pyenv/bin/python",
+    "python.linting.flake8Enabled": true,
+    "python.linting.pylintEnabled": false,
+    "python.formatting.autopep8Args": [
+        "--max-line-length",
+        "200"
+    ],
+    "python.unitTest.unittestEnabled": false,
+    "python.unitTest.nosetestsEnabled": false,
+    "python.unitTest.pyTestEnabled": true,
+    "python.unitTest.pyTestArgs": [
+        "--reuse-db",
+    ],
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/__pycache__": true,
+        ".idea": true,
+        ".pytest_cache": true,
+        ".pyenv": false
+    },
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/bower_components": true,
+        ".pyenv": false
+    }
+}

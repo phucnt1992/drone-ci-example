@@ -1,0 +1,8 @@
+[
+  "example/apps/book/tests.py::BookAPITestCase::test_delete_book",
+  "example/apps/book/tests.py::BookAPITestCase::test_get_book_detail",
+  "example/apps/book/tests.py::BookAPITestCase::test_get_book_list",
+  "example/apps/book/tests.py::BookAPITestCase::test_patch_book",
+  "example/apps/book/tests.py::BookAPITestCase::test_post_book",
+  "example/apps/book/tests.py::BookAPITestCase::test_put_book"
+]
